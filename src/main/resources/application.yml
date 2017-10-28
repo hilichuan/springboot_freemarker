@@ -1,0 +1,38 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/jdtest?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 131719
+    driver-class-name: com.mysql.jdbc.Driver
+  freemarker:
+    #allowRequestOverride: false
+    #allowSessionOverride: false
+    #cache: true
+    #checkTemplateLocation: true
+    #contentType: text/html
+    #exposeRequestAttributes: false
+    #exposeSessionAttributes: false
+   # exposeSpringMacroHelpers: false
+    suffix: .ftl
+    templateLoaderPath: classpath:/templates/  #��ʾ���е�ģ���ļ������ڸ�Ŀ¼��
+    #settings:
+      #locale: zh_CN
+      #date_format: yyyy-MM-dd
+      #time_format: HH:mm:ss
+      #datetime_format: yyyy-MM-dd HH:mm:ss
+    charset: UTF-8
+
+
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  typeAliasesPackage: b2c.html.domain
+  configLocation: classpath:mybatis-config.xml
+logging:
+  level:
+   b2c.html: debug
+
+
